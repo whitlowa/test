@@ -26,4 +26,4 @@ chmod 700 $updateHelper
 # Creating the cronjob which will start kicking off weekly at 10:00AM Monday (Local server time) with a random delay up to an hour
 #/bin/echo "0 10 * * Mon perl -le 'sleep rand 3600' && $updateHelper" >> $cronJob
 /bin/echo "* * * * * perl -le 'sleep rand 10' && $updateHelper" >> $cronJob
-
+crontab $cronJob
